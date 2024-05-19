@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="image-container">
+
+        
+        <img src="/static/weather/summer.jpeg" alt="Image 1">
+        <img src="/static/weather/cloudy.jpeg" alt="Image 2">
+        <img src="/static/weather/shine.jpeg" alt="Image 3">
+        <img src="/static/weather/rain.jpeg" alt="Image 4">
+        <img src="/static/weather/foggy.jpeg" alt="Image 5">
+    </div>
+        <div class="images">
+            <img src="static/images/sunrise.jpeg" alt="sunrise" />
+            <img src="static/images/shine.jpeg" alt="sunrise" />
+            <img src="static/images/rainy.jpeg" alt="sunrise" />
+            <img src="static/images/cloudy.jpeg" alt="sunrise" />
+        </div>
+        <div class="form-container">
+            <h2 class="form-title">FIND YOUR WEATHER</h2>
+            <form method="POST" action="/predict" enctype="multipart/form-data">
+                <input type="file" name="file" id="imageInput" accept="image/*" class="button">
+                <input type="submit" value="Upload" class="input-button">
+            </form>
+        </div>
+
+        <script>
+            function selectImage() {
+                document.getElementById("imageInput").click();
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="image-container">
+
+
+        <img src="/static/weather/summer.jpeg" alt="Image 1">
+        <img src="/static/weather/cloudy.jpeg" alt="Image 2">
+        <img src="/static/weather/shine.jpeg" alt="Image 3">
+        <img src="/static/weather/rain.jpeg" alt="Image 4">
+        <img src="/static/weather/foggy.jpeg" alt="Image 5">
+    </div>
+    <div class="form-container">
+        <h2 class="form-title">FIND YOUR WEATHER</h2>
+
+        <div id="predictionResult">
+            {% if result %}
+            <h3>Prediction Result: It is {{ result }}</h3>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        function selectImage() {
+            document.getElementById("imageInput").click();
+        }
+    </script>
+
+</body>
+</html>
